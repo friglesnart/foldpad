@@ -1,0 +1,1010 @@
+   1               		.file	"keymap.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.section	.text.press_key,"ax",@progbits
+  11               	.global	press_key
+  13               	press_key:
+  14               	.LFB107:
+  15               		.file 1 "keyboards/kb/keymaps/default/keymap.c"
+   1:keyboards/kb/keymaps/default/keymap.c **** #include "kb.h"
+   2:keyboards/kb/keymaps/default/keymap.c **** 
+   3:keyboards/kb/keymaps/default/keymap.c **** enum custom_keycodes {
+   4:keyboards/kb/keymaps/default/keymap.c **** 	KC_screenshot = SAFE_RANGE,
+   5:keyboards/kb/keymaps/default/keymap.c **** };
+   6:keyboards/kb/keymaps/default/keymap.c **** 
+   7:keyboards/kb/keymaps/default/keymap.c **** const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+   8:keyboards/kb/keymaps/default/keymap.c **** 
+   9:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  10:keyboards/kb/keymaps/default/keymap.c **** 		MO(1), 
+  11:keyboards/kb/keymaps/default/keymap.c **** 		MO(2), 
+  12:keyboards/kb/keymaps/default/keymap.c **** 		KC_VOLU, 
+  13:keyboards/kb/keymaps/default/keymap.c **** 		KC_VOLD, 
+  14:keyboards/kb/keymaps/default/keymap.c **** 		KC_MPLY, 
+  15:keyboards/kb/keymaps/default/keymap.c **** 		KC_MSTP),
+  16:keyboards/kb/keymaps/default/keymap.c **** 
+  17:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  18:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  19:keyboards/kb/keymaps/default/keymap.c **** 		RGB_TOG, 
+  20:keyboards/kb/keymaps/default/keymap.c **** 		RGB_HUI, 
+  21:keyboards/kb/keymaps/default/keymap.c **** 		RGB_HUD, 
+  22:keyboards/kb/keymaps/default/keymap.c **** 		RGB_SAI, 
+  23:keyboards/kb/keymaps/default/keymap.c **** 		RGB_SAD),
+  24:keyboards/kb/keymaps/default/keymap.c **** 
+  25:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  26:keyboards/kb/keymaps/default/keymap.c **** 		RESET, 
+  27:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  28:keyboards/kb/keymaps/default/keymap.c **** 		RGB_VAI, 
+  29:keyboards/kb/keymaps/default/keymap.c **** 		RGB_VAD, 
+  30:keyboards/kb/keymaps/default/keymap.c **** 		KC_PGUP, 
+  31:keyboards/kb/keymaps/default/keymap.c **** 		KC_PGDN),
+  32:keyboards/kb/keymaps/default/keymap.c **** 
+  33:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  34:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  35:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  36:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  37:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  38:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  39:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  40:keyboards/kb/keymaps/default/keymap.c **** 
+  41:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  42:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  43:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  44:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  45:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  46:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  47:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  48:keyboards/kb/keymaps/default/keymap.c **** 
+  49:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  50:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  51:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  52:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  53:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  54:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  55:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  56:keyboards/kb/keymaps/default/keymap.c **** 
+  57:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  58:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  59:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  60:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  61:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  62:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  63:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  64:keyboards/kb/keymaps/default/keymap.c **** 
+  65:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  66:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  67:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  68:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  69:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  70:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  71:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  72:keyboards/kb/keymaps/default/keymap.c **** 
+  73:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  74:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  75:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  76:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  77:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  78:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  79:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  80:keyboards/kb/keymaps/default/keymap.c **** 
+  81:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  82:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  83:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  84:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  85:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  86:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  87:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  88:keyboards/kb/keymaps/default/keymap.c **** 
+  89:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  90:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  91:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  92:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  93:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  94:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  95:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+  96:keyboards/kb/keymaps/default/keymap.c **** 
+  97:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+  98:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+  99:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 100:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 101:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 102:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 103:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+ 104:keyboards/kb/keymaps/default/keymap.c **** 
+ 105:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+ 106:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 107:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 108:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 109:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 110:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 111:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+ 112:keyboards/kb/keymaps/default/keymap.c **** 
+ 113:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+ 114:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 115:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 116:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 117:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 118:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 119:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+ 120:keyboards/kb/keymaps/default/keymap.c **** 
+ 121:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+ 122:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 123:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 124:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 125:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 126:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 127:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS),
+ 128:keyboards/kb/keymaps/default/keymap.c **** 
+ 129:keyboards/kb/keymaps/default/keymap.c **** 	KEYMAP(
+ 130:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 131:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 132:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 133:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 134:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS, 
+ 135:keyboards/kb/keymaps/default/keymap.c **** 		KC_TRNS)
+ 136:keyboards/kb/keymaps/default/keymap.c **** 
+ 137:keyboards/kb/keymaps/default/keymap.c **** };
+ 138:keyboards/kb/keymaps/default/keymap.c **** 
+ 139:keyboards/kb/keymaps/default/keymap.c **** void press_key(uint16_t key) {
+  16               		.loc 1 139 0
+  17               		.cfi_startproc
+  18               	.LVL0:
+  19 0000 CF93      		push r28
+  20               	.LCFI0:
+  21               		.cfi_def_cfa_offset 3
+  22               		.cfi_offset 28, -2
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	/* stack size = 1 */
+  26               	.L__stack_usage = 1
+  27 0002 C82F      		mov r28,r24
+ 140:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key);
+  28               		.loc 1 140 0
+  29 0004 0E94 0000 		call register_code
+  30               	.LVL1:
+ 141:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key);
+  31               		.loc 1 141 0
+  32 0008 8C2F      		mov r24,r28
+  33               	/* epilogue start */
+ 142:keyboards/kb/keymaps/default/keymap.c **** };
+  34               		.loc 1 142 0
+  35 000a CF91      		pop r28
+ 141:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key);
+  36               		.loc 1 141 0
+  37 000c 0C94 0000 		jmp unregister_code
+  38               	.LVL2:
+  39               		.cfi_endproc
+  40               	.LFE107:
+  42               		.section	.text.press_two_keys,"ax",@progbits
+  43               	.global	press_two_keys
+  45               	press_two_keys:
+  46               	.LFB108:
+ 143:keyboards/kb/keymaps/default/keymap.c **** 
+ 144:keyboards/kb/keymaps/default/keymap.c **** void press_two_keys(uint16_t key1, uint16_t key2) {
+  47               		.loc 1 144 0
+  48               		.cfi_startproc
+  49               	.LVL3:
+  50 0000 CF93      		push r28
+  51               	.LCFI1:
+  52               		.cfi_def_cfa_offset 3
+  53               		.cfi_offset 28, -2
+  54 0002 DF93      		push r29
+  55               	.LCFI2:
+  56               		.cfi_def_cfa_offset 4
+  57               		.cfi_offset 29, -3
+  58               	/* prologue: function */
+  59               	/* frame size = 0 */
+  60               	/* stack size = 2 */
+  61               	.L__stack_usage = 2
+  62 0004 C82F      		mov r28,r24
+  63 0006 D62F      		mov r29,r22
+ 145:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key1);
+  64               		.loc 1 145 0
+  65 0008 0E94 0000 		call register_code
+  66               	.LVL4:
+ 146:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key2);
+  67               		.loc 1 146 0
+  68 000c 8D2F      		mov r24,r29
+  69 000e 0E94 0000 		call register_code
+  70               	.LVL5:
+ 147:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key2);
+  71               		.loc 1 147 0
+  72 0012 8D2F      		mov r24,r29
+  73 0014 0E94 0000 		call unregister_code
+  74               	.LVL6:
+ 148:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key1);
+  75               		.loc 1 148 0
+  76 0018 8C2F      		mov r24,r28
+  77               	/* epilogue start */
+ 149:keyboards/kb/keymaps/default/keymap.c ****  };
+  78               		.loc 1 149 0
+  79 001a DF91      		pop r29
+  80 001c CF91      		pop r28
+ 148:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key1);
+  81               		.loc 1 148 0
+  82 001e 0C94 0000 		jmp unregister_code
+  83               	.LVL7:
+  84               		.cfi_endproc
+  85               	.LFE108:
+  87               		.section	.text.press_three_keys,"ax",@progbits
+  88               	.global	press_three_keys
+  90               	press_three_keys:
+  91               	.LFB109:
+ 150:keyboards/kb/keymaps/default/keymap.c ****   
+ 151:keyboards/kb/keymaps/default/keymap.c ****   void press_three_keys(uint16_t key1, uint16_t key2, uint16_t key3) {
+  92               		.loc 1 151 0
+  93               		.cfi_startproc
+  94               	.LVL8:
+  95 0000 1F93      		push r17
+  96               	.LCFI3:
+  97               		.cfi_def_cfa_offset 3
+  98               		.cfi_offset 17, -2
+  99 0002 CF93      		push r28
+ 100               	.LCFI4:
+ 101               		.cfi_def_cfa_offset 4
+ 102               		.cfi_offset 28, -3
+ 103 0004 DF93      		push r29
+ 104               	.LCFI5:
+ 105               		.cfi_def_cfa_offset 5
+ 106               		.cfi_offset 29, -4
+ 107               	/* prologue: function */
+ 108               	/* frame size = 0 */
+ 109               	/* stack size = 3 */
+ 110               	.L__stack_usage = 3
+ 111 0006 C82F      		mov r28,r24
+ 112 0008 D62F      		mov r29,r22
+ 113 000a 142F      		mov r17,r20
+ 152:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key1);
+ 114               		.loc 1 152 0
+ 115 000c 0E94 0000 		call register_code
+ 116               	.LVL9:
+ 153:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key2);
+ 117               		.loc 1 153 0
+ 118 0010 8D2F      		mov r24,r29
+ 119 0012 0E94 0000 		call register_code
+ 120               	.LVL10:
+ 154:keyboards/kb/keymaps/default/keymap.c **** 	register_code(key3);
+ 121               		.loc 1 154 0
+ 122 0016 812F      		mov r24,r17
+ 123 0018 0E94 0000 		call register_code
+ 124               	.LVL11:
+ 155:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key3);
+ 125               		.loc 1 155 0
+ 126 001c 812F      		mov r24,r17
+ 127 001e 0E94 0000 		call unregister_code
+ 128               	.LVL12:
+ 156:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key2);
+ 129               		.loc 1 156 0
+ 130 0022 8D2F      		mov r24,r29
+ 131 0024 0E94 0000 		call unregister_code
+ 132               	.LVL13:
+ 157:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key1);
+ 133               		.loc 1 157 0
+ 134 0028 8C2F      		mov r24,r28
+ 135               	/* epilogue start */
+ 158:keyboards/kb/keymaps/default/keymap.c ****  };
+ 136               		.loc 1 158 0
+ 137 002a DF91      		pop r29
+ 138 002c CF91      		pop r28
+ 139 002e 1F91      		pop r17
+ 157:keyboards/kb/keymaps/default/keymap.c **** 	unregister_code(key1);
+ 140               		.loc 1 157 0
+ 141 0030 0C94 0000 		jmp unregister_code
+ 142               	.LVL14:
+ 143               		.cfi_endproc
+ 144               	.LFE109:
+ 146               		.section	.text.process_record_user,"ax",@progbits
+ 147               	.global	process_record_user
+ 149               	process_record_user:
+ 150               	.LFB110:
+ 159:keyboards/kb/keymaps/default/keymap.c **** 
+ 160:keyboards/kb/keymaps/default/keymap.c **** bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+ 151               		.loc 1 160 0
+ 152               		.cfi_startproc
+ 153               	.LVL15:
+ 154               	/* prologue: function */
+ 155               	/* frame size = 0 */
+ 156               	/* stack size = 0 */
+ 157               	.L__stack_usage = 0
+ 161:keyboards/kb/keymaps/default/keymap.c **** 	switch (keycode) {
+ 158               		.loc 1 161 0
+ 159 0000 8034      		cpi r24,64
+ 160 0002 9047      		sbci r25,112
+ 161 0004 01F4      		brne .L11
+ 162:keyboards/kb/keymaps/default/keymap.c **** 		case KC_screenshot:
+ 163:keyboards/kb/keymaps/default/keymap.c **** 			if(record->event.pressed) {
+ 162               		.loc 1 163 0
+ 163 0006 FB01      		movw r30,r22
+ 164 0008 8281      		ldd r24,Z+2
+ 165               	.LVL16:
+ 166 000a 8823      		tst r24
+ 167 000c 01F0      		breq .L5
+ 164:keyboards/kb/keymaps/default/keymap.c **** 				press_three_keys(KC_RCTL, KC_RALT, KC_PSCR);
+ 168               		.loc 1 164 0
+ 169 000e 46E4      		ldi r20,lo8(70)
+ 170 0010 50E0      		ldi r21,0
+ 171 0012 66EE      		ldi r22,lo8(-26)
+ 172 0014 70E0      		ldi r23,0
+ 173               	.LVL17:
+ 174 0016 84EE      		ldi r24,lo8(-28)
+ 175 0018 90E0      		ldi r25,0
+ 176 001a 0E94 0000 		call press_three_keys
+ 177               	.LVL18:
+ 165:keyboards/kb/keymaps/default/keymap.c **** 			}
+ 166:keyboards/kb/keymaps/default/keymap.c **** 			return false;
+ 178               		.loc 1 166 0
+ 179 001e 80E0      		ldi r24,0
+ 180 0020 0895      		ret
+ 181               	.LVL19:
+ 182               	.L11:
+ 167:keyboards/kb/keymaps/default/keymap.c **** 			break;
+ 168:keyboards/kb/keymaps/default/keymap.c **** 			
+ 169:keyboards/kb/keymaps/default/keymap.c **** 	}		
+ 170:keyboards/kb/keymaps/default/keymap.c **** 	return true;
+ 183               		.loc 1 170 0
+ 184 0022 81E0      		ldi r24,lo8(1)
+ 185               	.LVL20:
+ 186               	.L5:
+ 171:keyboards/kb/keymaps/default/keymap.c **** };
+ 187               		.loc 1 171 0
+ 188 0024 0895      		ret
+ 189               		.cfi_endproc
+ 190               	.LFE110:
+ 192               		.section	.text.matrix_init_user,"ax",@progbits
+ 193               	.global	matrix_init_user
+ 195               	matrix_init_user:
+ 196               	.LFB115:
+ 197               		.cfi_startproc
+ 198               	/* prologue: function */
+ 199               	/* frame size = 0 */
+ 200               	/* stack size = 0 */
+ 201               	.L__stack_usage = 0
+ 202 0000 0895      		ret
+ 203               		.cfi_endproc
+ 204               	.LFE115:
+ 206               		.section	.text.matrix_scan_user,"ax",@progbits
+ 207               	.global	matrix_scan_user
+ 209               	matrix_scan_user:
+ 210               	.LFB112:
+ 172:keyboards/kb/keymaps/default/keymap.c **** 
+ 173:keyboards/kb/keymaps/default/keymap.c **** void matrix_init_user(void) {
+ 174:keyboards/kb/keymaps/default/keymap.c **** }
+ 175:keyboards/kb/keymaps/default/keymap.c **** 
+ 176:keyboards/kb/keymaps/default/keymap.c **** void matrix_scan_user(void) {
+ 211               		.loc 1 176 0
+ 212               		.cfi_startproc
+ 213               	/* prologue: function */
+ 214               	/* frame size = 0 */
+ 215               	/* stack size = 0 */
+ 216               	.L__stack_usage = 0
+ 217 0000 0895      		ret
+ 218               		.cfi_endproc
+ 219               	.LFE112:
+ 221               		.section	.text.led_set_user,"ax",@progbits
+ 222               	.global	led_set_user
+ 224               	led_set_user:
+ 225               	.LFB113:
+ 177:keyboards/kb/keymaps/default/keymap.c **** }
+ 178:keyboards/kb/keymaps/default/keymap.c **** 
+ 179:keyboards/kb/keymaps/default/keymap.c **** void led_set_user(uint8_t usb_led) {
+ 226               		.loc 1 179 0
+ 227               		.cfi_startproc
+ 228               	.LVL21:
+ 229               	/* prologue: function */
+ 230               	/* frame size = 0 */
+ 231               	/* stack size = 0 */
+ 232               	.L__stack_usage = 0
+ 233 0000 0895      		ret
+ 234               		.cfi_endproc
+ 235               	.LFE113:
+ 237               	.global	keymaps
+ 238               		.section	.progmem.data.keymaps,"a",@progbits
+ 241               	keymaps:
+ 242 0000 0151      		.word	20737
+ 243 0002 0000      		.word	0
+ 244 0004 0000      		.word	0
+ 245 0006 0000      		.word	0
+ 246 0008 0000      		.word	0
+ 247 000a 0000      		.word	0
+ 248 000c 0000      		.word	0
+ 249 000e 0251      		.word	20738
+ 250 0010 0000      		.word	0
+ 251 0012 0000      		.word	0
+ 252 0014 0000      		.word	0
+ 253 0016 0000      		.word	0
+ 254 0018 0000      		.word	0
+ 255 001a 0000      		.word	0
+ 256 001c A900      		.word	169
+ 257 001e 0000      		.word	0
+ 258 0020 0000      		.word	0
+ 259 0022 0000      		.word	0
+ 260 0024 0000      		.word	0
+ 261 0026 0000      		.word	0
+ 262 0028 0000      		.word	0
+ 263 002a AA00      		.word	170
+ 264 002c 0000      		.word	0
+ 265 002e 0000      		.word	0
+ 266 0030 0000      		.word	0
+ 267 0032 0000      		.word	0
+ 268 0034 0000      		.word	0
+ 269 0036 0000      		.word	0
+ 270 0038 AE00      		.word	174
+ 271 003a 0000      		.word	0
+ 272 003c 0000      		.word	0
+ 273 003e 0000      		.word	0
+ 274 0040 0000      		.word	0
+ 275 0042 0000      		.word	0
+ 276 0044 0000      		.word	0
+ 277 0046 AD00      		.word	173
+ 278 0048 0100      		.word	1
+ 279 004a 0000      		.word	0
+ 280 004c 0000      		.word	0
+ 281 004e 0000      		.word	0
+ 282 0050 0000      		.word	0
+ 283 0052 0000      		.word	0
+ 284 0054 0000      		.word	0
+ 285 0056 3470      		.word	28724
+ 286 0058 0000      		.word	0
+ 287 005a 0000      		.word	0
+ 288 005c 0000      		.word	0
+ 289 005e 0000      		.word	0
+ 290 0060 0000      		.word	0
+ 291 0062 0000      		.word	0
+ 292 0064 3670      		.word	28726
+ 293 0066 0000      		.word	0
+ 294 0068 0000      		.word	0
+ 295 006a 0000      		.word	0
+ 296 006c 0000      		.word	0
+ 297 006e 0000      		.word	0
+ 298 0070 0000      		.word	0
+ 299 0072 3770      		.word	28727
+ 300 0074 0000      		.word	0
+ 301 0076 0000      		.word	0
+ 302 0078 0000      		.word	0
+ 303 007a 0000      		.word	0
+ 304 007c 0000      		.word	0
+ 305 007e 0000      		.word	0
+ 306 0080 3870      		.word	28728
+ 307 0082 0000      		.word	0
+ 308 0084 0000      		.word	0
+ 309 0086 0000      		.word	0
+ 310 0088 0000      		.word	0
+ 311 008a 0000      		.word	0
+ 312 008c 0000      		.word	0
+ 313 008e 3970      		.word	28729
+ 314 0090 0070      		.word	28672
+ 315 0092 0000      		.word	0
+ 316 0094 0000      		.word	0
+ 317 0096 0000      		.word	0
+ 318 0098 0000      		.word	0
+ 319 009a 0000      		.word	0
+ 320 009c 0000      		.word	0
+ 321 009e 0100      		.word	1
+ 322 00a0 0000      		.word	0
+ 323 00a2 0000      		.word	0
+ 324 00a4 0000      		.word	0
+ 325 00a6 0000      		.word	0
+ 326 00a8 0000      		.word	0
+ 327 00aa 0000      		.word	0
+ 328 00ac 3A70      		.word	28730
+ 329 00ae 0000      		.word	0
+ 330 00b0 0000      		.word	0
+ 331 00b2 0000      		.word	0
+ 332 00b4 0000      		.word	0
+ 333 00b6 0000      		.word	0
+ 334 00b8 0000      		.word	0
+ 335 00ba 3B70      		.word	28731
+ 336 00bc 0000      		.word	0
+ 337 00be 0000      		.word	0
+ 338 00c0 0000      		.word	0
+ 339 00c2 0000      		.word	0
+ 340 00c4 0000      		.word	0
+ 341 00c6 0000      		.word	0
+ 342 00c8 4B00      		.word	75
+ 343 00ca 0000      		.word	0
+ 344 00cc 0000      		.word	0
+ 345 00ce 0000      		.word	0
+ 346 00d0 0000      		.word	0
+ 347 00d2 0000      		.word	0
+ 348 00d4 0000      		.word	0
+ 349 00d6 4E00      		.word	78
+ 350 00d8 0100      		.word	1
+ 351 00da 0000      		.word	0
+ 352 00dc 0000      		.word	0
+ 353 00de 0000      		.word	0
+ 354 00e0 0000      		.word	0
+ 355 00e2 0000      		.word	0
+ 356 00e4 0000      		.word	0
+ 357 00e6 0100      		.word	1
+ 358 00e8 0000      		.word	0
+ 359 00ea 0000      		.word	0
+ 360 00ec 0000      		.word	0
+ 361 00ee 0000      		.word	0
+ 362 00f0 0000      		.word	0
+ 363 00f2 0000      		.word	0
+ 364 00f4 0100      		.word	1
+ 365 00f6 0000      		.word	0
+ 366 00f8 0000      		.word	0
+ 367 00fa 0000      		.word	0
+ 368 00fc 0000      		.word	0
+ 369 00fe 0000      		.word	0
+ 370 0100 0000      		.word	0
+ 371 0102 0100      		.word	1
+ 372 0104 0000      		.word	0
+ 373 0106 0000      		.word	0
+ 374 0108 0000      		.word	0
+ 375 010a 0000      		.word	0
+ 376 010c 0000      		.word	0
+ 377 010e 0000      		.word	0
+ 378 0110 0100      		.word	1
+ 379 0112 0000      		.word	0
+ 380 0114 0000      		.word	0
+ 381 0116 0000      		.word	0
+ 382 0118 0000      		.word	0
+ 383 011a 0000      		.word	0
+ 384 011c 0000      		.word	0
+ 385 011e 0100      		.word	1
+ 386 0120 0100      		.word	1
+ 387 0122 0000      		.word	0
+ 388 0124 0000      		.word	0
+ 389 0126 0000      		.word	0
+ 390 0128 0000      		.word	0
+ 391 012a 0000      		.word	0
+ 392 012c 0000      		.word	0
+ 393 012e 0100      		.word	1
+ 394 0130 0000      		.word	0
+ 395 0132 0000      		.word	0
+ 396 0134 0000      		.word	0
+ 397 0136 0000      		.word	0
+ 398 0138 0000      		.word	0
+ 399 013a 0000      		.word	0
+ 400 013c 0100      		.word	1
+ 401 013e 0000      		.word	0
+ 402 0140 0000      		.word	0
+ 403 0142 0000      		.word	0
+ 404 0144 0000      		.word	0
+ 405 0146 0000      		.word	0
+ 406 0148 0000      		.word	0
+ 407 014a 0100      		.word	1
+ 408 014c 0000      		.word	0
+ 409 014e 0000      		.word	0
+ 410 0150 0000      		.word	0
+ 411 0152 0000      		.word	0
+ 412 0154 0000      		.word	0
+ 413 0156 0000      		.word	0
+ 414 0158 0100      		.word	1
+ 415 015a 0000      		.word	0
+ 416 015c 0000      		.word	0
+ 417 015e 0000      		.word	0
+ 418 0160 0000      		.word	0
+ 419 0162 0000      		.word	0
+ 420 0164 0000      		.word	0
+ 421 0166 0100      		.word	1
+ 422 0168 0100      		.word	1
+ 423 016a 0000      		.word	0
+ 424 016c 0000      		.word	0
+ 425 016e 0000      		.word	0
+ 426 0170 0000      		.word	0
+ 427 0172 0000      		.word	0
+ 428 0174 0000      		.word	0
+ 429 0176 0100      		.word	1
+ 430 0178 0000      		.word	0
+ 431 017a 0000      		.word	0
+ 432 017c 0000      		.word	0
+ 433 017e 0000      		.word	0
+ 434 0180 0000      		.word	0
+ 435 0182 0000      		.word	0
+ 436 0184 0100      		.word	1
+ 437 0186 0000      		.word	0
+ 438 0188 0000      		.word	0
+ 439 018a 0000      		.word	0
+ 440 018c 0000      		.word	0
+ 441 018e 0000      		.word	0
+ 442 0190 0000      		.word	0
+ 443 0192 0100      		.word	1
+ 444 0194 0000      		.word	0
+ 445 0196 0000      		.word	0
+ 446 0198 0000      		.word	0
+ 447 019a 0000      		.word	0
+ 448 019c 0000      		.word	0
+ 449 019e 0000      		.word	0
+ 450 01a0 0100      		.word	1
+ 451 01a2 0000      		.word	0
+ 452 01a4 0000      		.word	0
+ 453 01a6 0000      		.word	0
+ 454 01a8 0000      		.word	0
+ 455 01aa 0000      		.word	0
+ 456 01ac 0000      		.word	0
+ 457 01ae 0100      		.word	1
+ 458 01b0 0100      		.word	1
+ 459 01b2 0000      		.word	0
+ 460 01b4 0000      		.word	0
+ 461 01b6 0000      		.word	0
+ 462 01b8 0000      		.word	0
+ 463 01ba 0000      		.word	0
+ 464 01bc 0000      		.word	0
+ 465 01be 0100      		.word	1
+ 466 01c0 0000      		.word	0
+ 467 01c2 0000      		.word	0
+ 468 01c4 0000      		.word	0
+ 469 01c6 0000      		.word	0
+ 470 01c8 0000      		.word	0
+ 471 01ca 0000      		.word	0
+ 472 01cc 0100      		.word	1
+ 473 01ce 0000      		.word	0
+ 474 01d0 0000      		.word	0
+ 475 01d2 0000      		.word	0
+ 476 01d4 0000      		.word	0
+ 477 01d6 0000      		.word	0
+ 478 01d8 0000      		.word	0
+ 479 01da 0100      		.word	1
+ 480 01dc 0000      		.word	0
+ 481 01de 0000      		.word	0
+ 482 01e0 0000      		.word	0
+ 483 01e2 0000      		.word	0
+ 484 01e4 0000      		.word	0
+ 485 01e6 0000      		.word	0
+ 486 01e8 0100      		.word	1
+ 487 01ea 0000      		.word	0
+ 488 01ec 0000      		.word	0
+ 489 01ee 0000      		.word	0
+ 490 01f0 0000      		.word	0
+ 491 01f2 0000      		.word	0
+ 492 01f4 0000      		.word	0
+ 493 01f6 0100      		.word	1
+ 494 01f8 0100      		.word	1
+ 495 01fa 0000      		.word	0
+ 496 01fc 0000      		.word	0
+ 497 01fe 0000      		.word	0
+ 498 0200 0000      		.word	0
+ 499 0202 0000      		.word	0
+ 500 0204 0000      		.word	0
+ 501 0206 0100      		.word	1
+ 502 0208 0000      		.word	0
+ 503 020a 0000      		.word	0
+ 504 020c 0000      		.word	0
+ 505 020e 0000      		.word	0
+ 506 0210 0000      		.word	0
+ 507 0212 0000      		.word	0
+ 508 0214 0100      		.word	1
+ 509 0216 0000      		.word	0
+ 510 0218 0000      		.word	0
+ 511 021a 0000      		.word	0
+ 512 021c 0000      		.word	0
+ 513 021e 0000      		.word	0
+ 514 0220 0000      		.word	0
+ 515 0222 0100      		.word	1
+ 516 0224 0000      		.word	0
+ 517 0226 0000      		.word	0
+ 518 0228 0000      		.word	0
+ 519 022a 0000      		.word	0
+ 520 022c 0000      		.word	0
+ 521 022e 0000      		.word	0
+ 522 0230 0100      		.word	1
+ 523 0232 0000      		.word	0
+ 524 0234 0000      		.word	0
+ 525 0236 0000      		.word	0
+ 526 0238 0000      		.word	0
+ 527 023a 0000      		.word	0
+ 528 023c 0000      		.word	0
+ 529 023e 0100      		.word	1
+ 530 0240 0100      		.word	1
+ 531 0242 0000      		.word	0
+ 532 0244 0000      		.word	0
+ 533 0246 0000      		.word	0
+ 534 0248 0000      		.word	0
+ 535 024a 0000      		.word	0
+ 536 024c 0000      		.word	0
+ 537 024e 0100      		.word	1
+ 538 0250 0000      		.word	0
+ 539 0252 0000      		.word	0
+ 540 0254 0000      		.word	0
+ 541 0256 0000      		.word	0
+ 542 0258 0000      		.word	0
+ 543 025a 0000      		.word	0
+ 544 025c 0100      		.word	1
+ 545 025e 0000      		.word	0
+ 546 0260 0000      		.word	0
+ 547 0262 0000      		.word	0
+ 548 0264 0000      		.word	0
+ 549 0266 0000      		.word	0
+ 550 0268 0000      		.word	0
+ 551 026a 0100      		.word	1
+ 552 026c 0000      		.word	0
+ 553 026e 0000      		.word	0
+ 554 0270 0000      		.word	0
+ 555 0272 0000      		.word	0
+ 556 0274 0000      		.word	0
+ 557 0276 0000      		.word	0
+ 558 0278 0100      		.word	1
+ 559 027a 0000      		.word	0
+ 560 027c 0000      		.word	0
+ 561 027e 0000      		.word	0
+ 562 0280 0000      		.word	0
+ 563 0282 0000      		.word	0
+ 564 0284 0000      		.word	0
+ 565 0286 0100      		.word	1
+ 566 0288 0100      		.word	1
+ 567 028a 0000      		.word	0
+ 568 028c 0000      		.word	0
+ 569 028e 0000      		.word	0
+ 570 0290 0000      		.word	0
+ 571 0292 0000      		.word	0
+ 572 0294 0000      		.word	0
+ 573 0296 0100      		.word	1
+ 574 0298 0000      		.word	0
+ 575 029a 0000      		.word	0
+ 576 029c 0000      		.word	0
+ 577 029e 0000      		.word	0
+ 578 02a0 0000      		.word	0
+ 579 02a2 0000      		.word	0
+ 580 02a4 0100      		.word	1
+ 581 02a6 0000      		.word	0
+ 582 02a8 0000      		.word	0
+ 583 02aa 0000      		.word	0
+ 584 02ac 0000      		.word	0
+ 585 02ae 0000      		.word	0
+ 586 02b0 0000      		.word	0
+ 587 02b2 0100      		.word	1
+ 588 02b4 0000      		.word	0
+ 589 02b6 0000      		.word	0
+ 590 02b8 0000      		.word	0
+ 591 02ba 0000      		.word	0
+ 592 02bc 0000      		.word	0
+ 593 02be 0000      		.word	0
+ 594 02c0 0100      		.word	1
+ 595 02c2 0000      		.word	0
+ 596 02c4 0000      		.word	0
+ 597 02c6 0000      		.word	0
+ 598 02c8 0000      		.word	0
+ 599 02ca 0000      		.word	0
+ 600 02cc 0000      		.word	0
+ 601 02ce 0100      		.word	1
+ 602 02d0 0100      		.word	1
+ 603 02d2 0000      		.word	0
+ 604 02d4 0000      		.word	0
+ 605 02d6 0000      		.word	0
+ 606 02d8 0000      		.word	0
+ 607 02da 0000      		.word	0
+ 608 02dc 0000      		.word	0
+ 609 02de 0100      		.word	1
+ 610 02e0 0000      		.word	0
+ 611 02e2 0000      		.word	0
+ 612 02e4 0000      		.word	0
+ 613 02e6 0000      		.word	0
+ 614 02e8 0000      		.word	0
+ 615 02ea 0000      		.word	0
+ 616 02ec 0100      		.word	1
+ 617 02ee 0000      		.word	0
+ 618 02f0 0000      		.word	0
+ 619 02f2 0000      		.word	0
+ 620 02f4 0000      		.word	0
+ 621 02f6 0000      		.word	0
+ 622 02f8 0000      		.word	0
+ 623 02fa 0100      		.word	1
+ 624 02fc 0000      		.word	0
+ 625 02fe 0000      		.word	0
+ 626 0300 0000      		.word	0
+ 627 0302 0000      		.word	0
+ 628 0304 0000      		.word	0
+ 629 0306 0000      		.word	0
+ 630 0308 0100      		.word	1
+ 631 030a 0000      		.word	0
+ 632 030c 0000      		.word	0
+ 633 030e 0000      		.word	0
+ 634 0310 0000      		.word	0
+ 635 0312 0000      		.word	0
+ 636 0314 0000      		.word	0
+ 637 0316 0100      		.word	1
+ 638 0318 0100      		.word	1
+ 639 031a 0000      		.word	0
+ 640 031c 0000      		.word	0
+ 641 031e 0000      		.word	0
+ 642 0320 0000      		.word	0
+ 643 0322 0000      		.word	0
+ 644 0324 0000      		.word	0
+ 645 0326 0100      		.word	1
+ 646 0328 0000      		.word	0
+ 647 032a 0000      		.word	0
+ 648 032c 0000      		.word	0
+ 649 032e 0000      		.word	0
+ 650 0330 0000      		.word	0
+ 651 0332 0000      		.word	0
+ 652 0334 0100      		.word	1
+ 653 0336 0000      		.word	0
+ 654 0338 0000      		.word	0
+ 655 033a 0000      		.word	0
+ 656 033c 0000      		.word	0
+ 657 033e 0000      		.word	0
+ 658 0340 0000      		.word	0
+ 659 0342 0100      		.word	1
+ 660 0344 0000      		.word	0
+ 661 0346 0000      		.word	0
+ 662 0348 0000      		.word	0
+ 663 034a 0000      		.word	0
+ 664 034c 0000      		.word	0
+ 665 034e 0000      		.word	0
+ 666 0350 0100      		.word	1
+ 667 0352 0000      		.word	0
+ 668 0354 0000      		.word	0
+ 669 0356 0000      		.word	0
+ 670 0358 0000      		.word	0
+ 671 035a 0000      		.word	0
+ 672 035c 0000      		.word	0
+ 673 035e 0100      		.word	1
+ 674 0360 0100      		.word	1
+ 675 0362 0000      		.word	0
+ 676 0364 0000      		.word	0
+ 677 0366 0000      		.word	0
+ 678 0368 0000      		.word	0
+ 679 036a 0000      		.word	0
+ 680 036c 0000      		.word	0
+ 681 036e 0100      		.word	1
+ 682 0370 0000      		.word	0
+ 683 0372 0000      		.word	0
+ 684 0374 0000      		.word	0
+ 685 0376 0000      		.word	0
+ 686 0378 0000      		.word	0
+ 687 037a 0000      		.word	0
+ 688 037c 0100      		.word	1
+ 689 037e 0000      		.word	0
+ 690 0380 0000      		.word	0
+ 691 0382 0000      		.word	0
+ 692 0384 0000      		.word	0
+ 693 0386 0000      		.word	0
+ 694 0388 0000      		.word	0
+ 695 038a 0100      		.word	1
+ 696 038c 0000      		.word	0
+ 697 038e 0000      		.word	0
+ 698 0390 0000      		.word	0
+ 699 0392 0000      		.word	0
+ 700 0394 0000      		.word	0
+ 701 0396 0000      		.word	0
+ 702 0398 0100      		.word	1
+ 703 039a 0000      		.word	0
+ 704 039c 0000      		.word	0
+ 705 039e 0000      		.word	0
+ 706 03a0 0000      		.word	0
+ 707 03a2 0000      		.word	0
+ 708 03a4 0000      		.word	0
+ 709 03a6 0100      		.word	1
+ 710 03a8 0100      		.word	1
+ 711 03aa 0000      		.word	0
+ 712 03ac 0000      		.word	0
+ 713 03ae 0000      		.word	0
+ 714 03b0 0000      		.word	0
+ 715 03b2 0000      		.word	0
+ 716 03b4 0000      		.word	0
+ 717 03b6 0100      		.word	1
+ 718 03b8 0000      		.word	0
+ 719 03ba 0000      		.word	0
+ 720 03bc 0000      		.word	0
+ 721 03be 0000      		.word	0
+ 722 03c0 0000      		.word	0
+ 723 03c2 0000      		.word	0
+ 724 03c4 0100      		.word	1
+ 725 03c6 0000      		.word	0
+ 726 03c8 0000      		.word	0
+ 727 03ca 0000      		.word	0
+ 728 03cc 0000      		.word	0
+ 729 03ce 0000      		.word	0
+ 730 03d0 0000      		.word	0
+ 731 03d2 0100      		.word	1
+ 732 03d4 0000      		.word	0
+ 733 03d6 0000      		.word	0
+ 734 03d8 0000      		.word	0
+ 735 03da 0000      		.word	0
+ 736 03dc 0000      		.word	0
+ 737 03de 0000      		.word	0
+ 738 03e0 0100      		.word	1
+ 739 03e2 0000      		.word	0
+ 740 03e4 0000      		.word	0
+ 741 03e6 0000      		.word	0
+ 742 03e8 0000      		.word	0
+ 743 03ea 0000      		.word	0
+ 744 03ec 0000      		.word	0
+ 745 03ee 0100      		.word	1
+ 746 03f0 0100      		.word	1
+ 747 03f2 0000      		.word	0
+ 748 03f4 0000      		.word	0
+ 749 03f6 0000      		.word	0
+ 750 03f8 0000      		.word	0
+ 751 03fa 0000      		.word	0
+ 752 03fc 0000      		.word	0
+ 753 03fe 0100      		.word	1
+ 754 0400 0000      		.word	0
+ 755 0402 0000      		.word	0
+ 756 0404 0000      		.word	0
+ 757 0406 0000      		.word	0
+ 758 0408 0000      		.word	0
+ 759 040a 0000      		.word	0
+ 760 040c 0100      		.word	1
+ 761 040e 0000      		.word	0
+ 762 0410 0000      		.word	0
+ 763 0412 0000      		.word	0
+ 764 0414 0000      		.word	0
+ 765 0416 0000      		.word	0
+ 766 0418 0000      		.word	0
+ 767 041a 0100      		.word	1
+ 768 041c 0000      		.word	0
+ 769 041e 0000      		.word	0
+ 770 0420 0000      		.word	0
+ 771 0422 0000      		.word	0
+ 772 0424 0000      		.word	0
+ 773 0426 0000      		.word	0
+ 774 0428 0100      		.word	1
+ 775 042a 0000      		.word	0
+ 776 042c 0000      		.word	0
+ 777 042e 0000      		.word	0
+ 778 0430 0000      		.word	0
+ 779 0432 0000      		.word	0
+ 780 0434 0000      		.word	0
+ 781 0436 0100      		.word	1
+ 782 0438 0100      		.word	1
+ 783 043a 0000      		.word	0
+ 784 043c 0000      		.word	0
+ 785 043e 0000      		.word	0
+ 786 0440 0000      		.word	0
+ 787 0442 0000      		.word	0
+ 788 0444 0000      		.word	0
+ 789 0446 0100      		.word	1
+ 790 0448 0000      		.word	0
+ 791 044a 0000      		.word	0
+ 792 044c 0000      		.word	0
+ 793 044e 0000      		.word	0
+ 794 0450 0000      		.word	0
+ 795 0452 0000      		.word	0
+ 796 0454 0100      		.word	1
+ 797 0456 0000      		.word	0
+ 798 0458 0000      		.word	0
+ 799 045a 0000      		.word	0
+ 800 045c 0000      		.word	0
+ 801 045e 0000      		.word	0
+ 802 0460 0000      		.word	0
+ 803 0462 0100      		.word	1
+ 804 0464 0000      		.word	0
+ 805 0466 0000      		.word	0
+ 806 0468 0000      		.word	0
+ 807 046a 0000      		.word	0
+ 808 046c 0000      		.word	0
+ 809 046e 0000      		.word	0
+ 810 0470 0100      		.word	1
+ 811 0472 0000      		.word	0
+ 812 0474 0000      		.word	0
+ 813 0476 0000      		.word	0
+ 814 0478 0000      		.word	0
+ 815 047a 0000      		.word	0
+ 816 047c 0000      		.word	0
+ 817 047e 0100      		.word	1
+ 818               		.text
+ 819               	.Letext0:
+ 820               		.file 2 "/usr/lib/avr/include/stdint.h"
+ 821               		.file 3 "./tmk_core/common/keyboard.h"
+ 822               		.file 4 "./tmk_core/common/keycode.h"
+ 823               		.file 5 "./tmk_core/common/action.h"
+ 824               		.file 6 "./quantum/quantum_keycodes.h"
+ 825               		.file 7 "./tmk_core/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 keymap.c
+     /tmp/ccjuEn00.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccjuEn00.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccjuEn00.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccjuEn00.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccjuEn00.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccjuEn00.s:13     .text.press_key:0000000000000000 press_key
+     /tmp/ccjuEn00.s:45     .text.press_two_keys:0000000000000000 press_two_keys
+     /tmp/ccjuEn00.s:90     .text.press_three_keys:0000000000000000 press_three_keys
+     /tmp/ccjuEn00.s:149    .text.process_record_user:0000000000000000 process_record_user
+     /tmp/ccjuEn00.s:195    .text.matrix_init_user:0000000000000000 matrix_init_user
+     /tmp/ccjuEn00.s:209    .text.matrix_scan_user:0000000000000000 matrix_scan_user
+     /tmp/ccjuEn00.s:224    .text.led_set_user:0000000000000000 led_set_user
+     /tmp/ccjuEn00.s:241    .progmem.data.keymaps:0000000000000000 keymaps
+
+UNDEFINED SYMBOLS
+register_code
+unregister_code
